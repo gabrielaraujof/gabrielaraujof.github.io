@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            Site Title
-locale:           en_US
-url:              
+title:            Gabriel Araujo
+locale:           pt_BR
+url:              #gabrielaraujo.info
 
 
 # Jekyll configuration
@@ -26,23 +26,23 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Gabriel Araujo
   avatar: bio-photo.jpg
-  bio: "Describe your self."
+  bio: "An ever curious computer scientist, programmer, professor, lover and tech enthusiast."
   email: 
   disqus-shortname: 
-  twitter: #username
-  facebook: #username
+  twitter: gabrielfeear
+  facebook: GabrielAraujoF
   google:
-    plus: #username
-    analytics: 
+    plus: GabrielAraujoF
+    analytics: UA-50425694-1 
     verify: 
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: #username
+  github: gabrielaraujof
   stackoverflow: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
+  linkedin: gabrielaraujof
   instagram: #username
   lastfm: #username
   tumblr: #username
