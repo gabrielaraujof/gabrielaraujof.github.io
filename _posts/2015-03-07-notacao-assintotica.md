@@ -11,6 +11,8 @@ image:
 date: 2015-03-07T01:21:52-03:00
 ---
 
+{% include _toc.html %}
+
 Na análise de algoritmos é comum definirmos o **tempo de execução** de um algoritmo sob uma entrada específica como sendo o número de "*passos*" executados. A noção abstrata de um passo de execução é conveniente para que o tempo de execução de um algoritmo seja independente de máquina. Assumimos que uma quantidade de tempo constante é requerida para executar cada linha do pseudocódigo do algoritmo. Assim, a execução de cada linha $$i$$ leva o tempo $$t$$, constante.
 
 Apesar de independente de máquina, podemos fazer afirmações concretas sobre o tempo de execução de um algoritmo: "*Sobre qualquer entrada de tamanho $$n$$, o algoritmo $$\mathbf{A}$$ executa com no máximo $$1.62n^2 + 3.5n + 8$$ passos.*"
@@ -19,19 +21,53 @@ Entretanto, essa abordagem não é prática por várias razões, incluindo ser t
 
 Um dos comportamentos que estamos interessados é a taxa de crescimento das várias funções do algoritmo sobre o tamanho da entrada, por exemplo, o tempo de execução -- em outras palavras, o quão rápido o tempo de execução cresce com o tamanho da entrada. E uma maneira genérica de avaliar tal comportamento é por meio da **análise assintótica** dessas funções, qual é insensível a fatores constantes ou termos de baixa ordem. Ou seja, se um determinado algoritmo tem um tempo de execução $$1.62n^2 + 3.5n + 8$$, o que nos interessa saber é que a sua taxa de crescimento é $$n^2$$, ou quadrática.
 
-### Limites Superiores Assintóticos e Notação *Big-O*
+### Limites Assintóticos Superiores -- $$\mathbf{O}$$
 
-Para uma dada função $$g(n)$$, denotamos por $$O(g(n))$$ (pronunciado "big-oh de $$g$$ de $$n$$" ou simplesmente "oh de $$g$$ de $$n$$") o conjunto de funções
+Para uma dada função $$g(n)$$, denotamos por $$O(g(n))$$ (conhecido como notação ***Big-O*** e pronunciado "big-oh de $$g$$ de $$n$$" ou simplesmente "oh de $$g$$ de $$n$$") o conjunto de funções
 
 $$
 \begin{align*}
 O(g(n)) = \{ f(n) : &\text{ existem constantes positivas } c \text{ e } n_0 \text{ tal que }\\
-                    &0 \leq f(n) \leq cg(n) \text{ para todos } n \geq n_0 \}
+                    &0 \leq f(n) \leq c \cdot g(n) \text{ para todos } n \geq n_0 \}
 \end{align*}
 $$
 
-Em outras palavras, uma função $$f(n)$$ pertence ao conjunto $$O(g(n))$$ se existe uma constante positiva $$c$$ tal que $$cg(n)$$ é um limite superior de $$f(n)$$ para valores de $$n$$ suficientemente grandes, ou seja, $$g(n)$$ é um limite superior assintótico de $$f(n)$$ --- o mais correto seria escrevermos $$f(n) \in O(g(n))$$, mas também é comum escrevermos $$f(n) = O(g(n))$$ para denotar o mesmo.
+Em outras palavras, uma função $$f(n)$$ pertence ao conjunto $$O(g(n))$$ se existe uma constante positiva $$c$$ tal que $$c \cdot g(n)$$ é um limite superior de $$f(n)$$ para valores de $$n$$ suficientemente grandes, ou seja, $$g(n)$$ é um limite superior assintótico de $$f(n)$$ --- o mais correto seria escrevermos $$f(n) \in O(g(n))$$, mas também é comum escrevermos $$f(n) = O(g(n))$$ para denotar o mesmo.
 
+### Limites Assintóticos Inferiores -- $$\mathbf{\Omega}$$
+
+A notação $$\mathbf{\Omega}$$(.) funciona da mesma maneira que a notação $$O$$(.), exceto que esta descreve o limite assintótico *inferior* da função. Então, formalmente, para uma dada função $$g(n)$$ denotamos por $$\Omega(g(n))$$ (pronunciado "big-omega de $$g$$ de $$n$$" ou simplesmente "omega de $$g$$ de $$n$$") o conjunto de funções
+
+$$
+\begin{align*}
+\Omega(g(n)) = \{ f(n) : &\text{ existem constantes positivas } c \text{ e } n_0 \text{ tal que }\\
+                    &0 \leq c \cdot g(n) \leq f(n) \text{ para todos } n \geq n_0 \}
+\end{align*}
+$$
+
+Da maneira análoga ao limite superior, dizemos que existe uma constante positiva $$c$$ tal que $$c \cdot g(n)$$ é um limite assintótico inferior de $$f(n)$$ para valores de $$n$$ suficientemente grandes. Em outras palavras, para valores grandes de $$n$$ a função $$f(n)$$ é *pelo menos* $$g(n)$$.
+
+### Limites Assintóticos Restritos -- $$\mathbf{\Theta}$$
+
+Quando um função $$f(n)$$ é ao mesmo tempo $$O(g(n))$$ e $$\Omega(g(n))$$, então dizemos que $$f(n)$$ é $$\Theta(g(n))$$, denotando que $$g(n)$$ é um limite assintótico *retrito*. Na prática, queremos dizer que a função $$f(n)$$ cresce exatamente como $$g(n)$$ dentro de um fator constante. Similarmente, $$\Theta(g(n))$$ é o conjunto de funções
+
+$$
+\begin{align*}
+\Omega(g(n)) = \{ f(n) : &\text{ existem constantes positivas } c_1 \text{, } c_2 \text{ e } n_0 \text{ tal que }\\
+                    &0 \leq c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n) \text{ para todos } n \geq n_0 \}
+\end{align*}
+$$
+
+Gráficamente podemos ver o efeito desse limites assintóticos na imagem abaixo:
+
+<figure>
+	<a href="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/images/fig2.1.gif"><img src="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/images/fig2.1.gif"></a>
+	<figcaption><a href="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/2.1%20Asymptotic%20Notation.html" title="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/2.1%20Asymptotic%20Notation.html">Exemplo de funções com limites assintóticos restritos, superiores e inferiores. (a) restringe uma função dentro de fatores constantes. (b) limita superiormente uma função dentro de fatores constantes. (c) limita inferiormente uma função dentro de fatores constantes</a>.</figcaption>
+</figure>
+
+### Limites Assintóticos e Algoritmos
+
+Em particular aos algoritmos, a notação *Big-O* é muito utilizada para expressar os limites assintóticos superiores do tempo de execução, ou seja ...
 
 - [***Algorithm Design*** by Jon Kleinberg, Éva Tardos][algorithm-design]
 - [***Introduction to Algorithms*** by Thomas H. Cormen et. al.][intro-algorithm]
