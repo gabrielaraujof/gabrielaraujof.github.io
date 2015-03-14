@@ -67,10 +67,20 @@ Gráficamente podemos ver o efeito desse limites assintóticos na imagem abaixo:
 
 ### Limites Assintóticos e Algoritmos
 
-Em particular aos algoritmos, a notação *Big-O* é muito utilizada para expressar os limites assintóticos superiores do tempo de execução, ou seja ...
+Em particular aos algoritmos, a notação *Big-O* é muito utilizada para descrever os limites assintóticos superiores das funções do tempo de execução e espaço em memória utilizado, chamados de **complexidade de tempo e espaço**, respectivamente. Tais complexidades são comumente descritas para cenários específicos, como o melhor caso, pior caso, e o caso médio.
 
+O termo **melhor caso** se refere ao comportamento do algoritmo sob condições ótimas. Por exemplo: para um algoritmo de ordenação, a condição ótima seria um array de entrada já ordenado. De maneira análoga, o termo **pior caso** se refere as condições extremas de execução do algoritmo, que no exemplo anterior poderia ser um array em ordem decrescente. Já para o **caso médio**, como o próprio nome indica, trivialmente descrevemos uma média da função analisada sob todos os possíveis cenários.
+
+O algoritmo de ordenação ***Insertion sort***, ou *ordenação por inserção*, tem um tempo de execução no pior caso $O(n^2)$, ou seja, no pior cenário possível o tempo de execução do algoritmo será uma função $an^2 + bn + c$, sendo $n$ o tamanho do array de entrada. Essas análises podem ser utilizadas na comparação de performance dos algoritmos, ou até para escolhermos aquele que mais se adequa a nossa situação. Uma ótima referência é o site [**Big-O Cheat Sheet**][bigosheet], que traz as complexidades dos algoritmos e estruturas de dados mais comuns descritos com a notação *Big-O*.
+
+Em outro artigo, falaremos um pouco mais sobre as complexidades de tempo e espaço.
+
+### Leituras adicionais
+
+- [***Big-O Cheat Sheet*** (http://bigocheatsheet.com/)][bigosheet]
 - [***Algorithm Design*** by Jon Kleinberg, Éva Tardos][algorithm-design]
 - [***Introduction to Algorithms*** by Thomas H. Cormen et. al.][intro-algorithm]
 
+[bigosheet]: http://bigocheatsheet.com/ "Big-O Cheat Sheet"
 [intro-algorithm]: http://books.google.com.br/books?id=0BoNBQAAQBAJ "Introduction to Algorithms by Thomas H. Cormen et. al."
 [algorithm-design]: https://books.google.com.br/books?id=QWIrAAAAQBAJ "Algorithm Design by Jon Kleinberg, Éva Tardos"
