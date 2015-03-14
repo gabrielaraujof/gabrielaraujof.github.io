@@ -1,9 +1,7 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+excerpt: "An ever curious computer scientist, programmer, professor, lover and tech enthusiast."
+tags: [gabriel araujo, professor, software developer, computer science]
 image:
-  feature: sample-image-1.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: keyboard.jpg
 ---
