@@ -37,3 +37,8 @@
   <meta content="{{ tag }}" property="article:tag">
   {% endfor %}
 {% endif %}
+
+<!-- Google+ -->
+{% if page.title %} <meta itemprop="og:headline" content="{{ page.title }}" /> {% endif %}
+{% if page.excerpt %} <meta itemprop="og:description" content="{{ page.excerpt | strip_html }}" /> {% endif %}
+
