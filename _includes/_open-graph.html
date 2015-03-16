@@ -39,6 +39,11 @@
 {% endif %}
 
 <!-- Google+ -->
-{% if page.title %} <meta itemprop="og:headline" content="{{ page.title }}" /> {% endif %}
-{% if page.excerpt %} <meta itemprop="og:description" content="{{ page.excerpt | strip_html }}" /> {% endif %}
 
+<!-- Update your html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Article">
+
+<!-- Add the following three tags inside head. -->
+{% if page.title %} <meta itemprop="name" content="{{ page.title }}" /> {% endif %}
+{% if page.excerpt %} <meta itemprop="description" content="{{ page.excerpt | strip_html }}" /> {% endif %}
+<meta content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}" itemprop="image">
