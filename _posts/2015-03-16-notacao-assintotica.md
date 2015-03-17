@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Notação Assintótica [Portuguese]"
-modified:
+modified: 2015-03-17T12:01:52-03:00
 categories: algorithm-analysis
-excerpt: Medindo a complexidade dos algoritmos.
+excerpt: Notação assintótica é uma notação matemática utilizada na análise e comparação de funções f(x) quando x tende à valores grandes (eventualmente ao infinito). Também é um tipo de notação bastante utilizada na análise de complexidade dos algoritmos.
 tags: [algorithm analysis, asymptotic notation, big-O]
 comments: true
 image:
-  feature:
-date: 2015-03-07T01:21:52-03:00
+  thumb: http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/images/fig2.1.gif
+date: 2015-03-16T01:21:52-03:00
 ---
 
 {% include _toc.html %}
