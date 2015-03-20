@@ -14,7 +14,7 @@ Hello! I am Gabriel and I live in Aracaju, Brazil. I am a software developer, te
 ### Quick facts about me
 
 - I ran away from home when I was 3 years old.
-- In seventh grade, my math and physics exams always had an extra question.
+- In seventh grade, my challenge in life was to take tests with an extra question.
 - I never had a video game console --- poor me!
 - I was 17 when my father bought our very first computer.
 - And just six months later it was my first day in Computer Science college.
