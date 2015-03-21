@@ -8,7 +8,7 @@ tags: [python, install, get started, instalação, programming, programação]
 image:
   thumb: python-thumb.png
 comments: true
-date: 2015-02-21T10:00:17-03:00
+date: 2015-03-21T10:00:17-03:00
 ---
 
 {% include _toc.html %}
