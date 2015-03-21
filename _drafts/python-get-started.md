@@ -1,12 +1,14 @@
 ---
 layout: post
 title: "Python: Por Onde Começo?"
-excerpt: Passo-a-passo de como configurar seu ambiente de desenvolvimento e começar a programar em Python.
+modified:
+excerpt: Um rápido passo-a-passo sobre como instalar o Python no seu sistema Linux, Max OSX ou Windows.
 categories: programming
 tags: [python, install, get started, instalação, programming, programação]
 image:
   thumb: python-thumb.png
 comments: true
+date: 2015-02-21T10:00:17-03:00
 ---
 
 {% include _toc.html %}
@@ -83,9 +85,8 @@ O windows não vem com o Python instalado de fábrica, então para aqueles que u
 Duplo clique no instalador baixado para iniciar a instalação. Siga as instruções e aguarde a finalização do processo de instalação. **Pronto, seu Windows já tem o Python instalado!** *Importante*: se vocẽ estiver instalando a versão 2.x do Python, é bem provável que você precise configurar as variáveis de ambiente. No caso da versão 3.x, o instalador já realiza esta etapa automaticamente. Uma vez instalado, você já pode se divertir programando em Python. Basta executar o prompt de comando e entrar no modo interativo.
 
 {% highlight console %}
-C:\Users\Gabriel> python3
-Python 3.4.1 (v3.4.1:c0e311e010fc, Apr 11 2014, 13:05:11)
-[MSC v.1600 32 bit (Intel)] on win32
+C:\Users\Gabriel Araujo> python
+Python 3.4.2 (v3.4.2:ab2c023a9432, Apr 11 2014, 13:05:11) [MSC v.1600 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 {% endhighlight %}
