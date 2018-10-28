@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm Analysis on Gabriel Araujo</title>
+    <link>http://gbiel.com/categories/algorithm-analysis/</link>
+    <description>Recent content in Algorithm Analysis on Gabriel Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Mar 2015 01:21:52 +0000</lastBuildDate>
+    
+	<atom:link href="http://gbiel.com/categories/algorithm-analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notação Assintótica [Portuguese]</title>
+      <link>http://gbiel.com/post/2015-03-16-notacao-assintotica/</link>
+      <pubDate>Mon, 16 Mar 2015 01:21:52 +0000</pubDate>
+      
+      <guid>http://gbiel.com/post/2015-03-16-notacao-assintotica/</guid>
+      <description>{% include _toc.html %}
+Na análise de algoritmos é comum definirmos o tempo de execução de um algoritmo sob uma entrada específica como sendo o número de &amp;ldquo;passos&amp;rdquo; executados. A noção abstrata de um passo de execução é conveniente para que o tempo de execução de um algoritmo seja independente de máquina. Assumimos que uma quantidade de tempo constante é requerida para executar cada linha do pseudocódigo do algoritmo. Assim, a execução de cada linha $$i$$ leva o tempo $$t$$, constante.</description>
+    </item>
+    
+  </channel>
+</rss>

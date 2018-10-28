@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://gbiel.com/post/2015-03-21-python-get-started/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/post/2015-03-16-notacao-assintotica/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/algorithm-analysis/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/categories/algorithm-analysis/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/asymptotic-notation/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/big-o/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/categories/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/get-started/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/instala%C3%A7%C3%A3o/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/install/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/post/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/programa%C3%A7%C3%A3o/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/programming/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/categories/programming/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/python/</loc>
+    <lastmod>2015-03-21T10:00:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://gbiel.com/tags/</loc>
+    <lastmod>2015-03-17T12:01:52-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

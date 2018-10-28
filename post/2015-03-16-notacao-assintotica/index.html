@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="http://gbiel.com/img/favicon.ico">
+    <title>Notação Assintótica [Portuguese]</title>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://gbiel.com/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://gbiel.com/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="http://gbiel.com/post/2015-03-16-notacao-assintotica/">Notação Assintótica [Portuguese]</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          March 16, 2015
+            &nbsp;&nbsp;
+            
+            <span class="label label-success">algorithm analysis</span>
+            
+            <span class="label label-success">asymptotic notation</span>
+            
+            <span class="label label-success">big-O</span>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<p>{% include _toc.html %}</p>
+
+<p>Na análise de algoritmos é comum definirmos o <strong>tempo de execução</strong> de um algoritmo sob uma entrada específica como sendo o número de &ldquo;<em>passos</em>&rdquo; executados. A noção abstrata de um passo de execução é conveniente para que o tempo de execução de um algoritmo seja independente de máquina. Assumimos que uma quantidade de tempo constante é requerida para executar cada linha do pseudocódigo do algoritmo. Assim, a execução de cada linha $$i$$ leva o tempo $$t$$, constante.</p>
+
+<p>Apesar de independente de máquina, podemos fazer afirmações concretas sobre o tempo de execução de um algoritmo: &ldquo;<em>Sobre qualquer entrada de tamanho $$n$$, o algoritmo $$\mathbf{A}$$ executa com no máximo $$1.62n^2 + 3.5n + 8$$ passos.</em>&ldquo;</p>
+
+<p>Entretanto, essa abordagem não é prática por várias razões, incluindo ser trabalhosa e detalhada demais. Além disso, um dos principais objetivos da análise de algoritmos é identificar  classes de algoritmos com comportamentos similares, e para isso nossa descrição precisa ter um nível a mais de granularidade &mdash; o que eu quero dizer com isso é que nossa descrição precisa ser mais genérica, para que as similaridades de algoritmos diferentes sejam aparentes.</p>
+
+<p>Um dos comportamentos que estamos interessados é a taxa de crescimento das várias funções do algoritmo sobre o tamanho da entrada, por exemplo, o tempo de execução &ndash; em outras palavras, o quão rápido o tempo de execução cresce com o tamanho da entrada. E uma maneira genérica de avaliar tal comportamento é por meio da <strong>análise assintótica</strong> dessas funções, qual é insensível a fatores constantes ou termos de baixa ordem. Ou seja, se um determinado algoritmo tem um tempo de execução $$1.62n^2 + 3.5n + 8$$, o que nos interessa saber é que a sua taxa de crescimento é $$n^2$$, ou quadrática.</p>
+
+<h3 id="limites-assintóticos-superiores-mathbf-o">Limites Assintóticos Superiores &ndash; $$\mathbf{O}$$</h3>
+
+<p>Para uma dada função $$g(n)$$, denotamos por $$O(g(n))$$ (conhecido como notação <strong><em>Big-O</em></strong> e pronunciado &ldquo;big-oh de $$g$$ de $$n$$&rdquo; ou simplesmente &ldquo;oh de $$g$$ de $$n$$&rdquo;) o conjunto de funções</p>
+
+<p>$$
+\begin{align<em>}
+O(g(n)) = { f(n) : &amp;\text{ existem constantes positivas } c \text{ e } n_0 \text{ tal que }<br />
+                    &amp;0 \leq f(n) \leq c \cdot g(n) \text{ para todos } n \geq n_0 }
+\end{align</em>}
+$$</p>
+
+<p>Em outras palavras, uma função $$f(n)$$ pertence ao conjunto $$O(g(n))$$ se existe uma constante positiva $$c$$ tal que $$c \cdot g(n)$$ é um limite superior de $$f(n)$$ para valores de $$n$$ suficientemente grandes, ou seja, $$g(n)$$ é um limite superior assintótico de $$f(n)$$ &mdash; o mais correto seria escrevermos $$f(n) \in O(g(n))$$, mas também é comum escrevermos $$f(n) = O(g(n))$$ para denotar o mesmo.</p>
+
+<h3 id="limites-assintóticos-inferiores-mathbf-omega">Limites Assintóticos Inferiores &ndash; $$\mathbf{\Omega}$$</h3>
+
+<p>A notação $$\mathbf{\Omega}$$(.) funciona da mesma maneira que a notação $$O$$(.), exceto que esta descreve o limite assintótico <em>inferior</em> da função. Então, formalmente, para uma dada função $$g(n)$$ denotamos por $$\Omega(g(n))$$ (pronunciado &ldquo;big-omega de $$g$$ de $$n$$&rdquo; ou simplesmente &ldquo;omega de $$g$$ de $$n$$&rdquo;) o conjunto de funções</p>
+
+<p>$$
+\begin{align<em>}
+\Omega(g(n)) = { f(n) : &amp;\text{ existem constantes positivas } c \text{ e } n_0 \text{ tal que }<br />
+                    &amp;0 \leq c \cdot g(n) \leq f(n) \text{ para todos } n \geq n_0 }
+\end{align</em>}
+$$</p>
+
+<p>Da maneira análoga ao limite superior, dizemos que existe uma constante positiva $$c$$ tal que $$c \cdot g(n)$$ é um limite assintótico inferior de $$f(n)$$ para valores de $$n$$ suficientemente grandes. Em outras palavras, para valores grandes de $$n$$ a função $$f(n)$$ é <em>pelo menos</em> $$g(n)$$.</p>
+
+<h3 id="limites-assintóticos-restritos-mathbf-theta">Limites Assintóticos Restritos &ndash; $$\mathbf{\Theta}$$</h3>
+
+<p>Quando um função $$f(n)$$ é ao mesmo tempo $$O(g(n))$$ e $$\Omega(g(n))$$, então dizemos que $$f(n)$$ é $$\Theta(g(n))$$, denotando que $$g(n)$$ é um limite assintótico <em>retrito</em>. Na prática, queremos dizer que a função $$f(n)$$ cresce exatamente como $$g(n)$$ dentro de um fator constante. Similarmente, $$\Theta(g(n))$$ é o conjunto de funções</p>
+
+<p>$$
+\begin{align<em>}
+\Omega(g(n)) = { f(n) : &amp;\text{ existem constantes positivas } c_1 \text{, } c_2 \text{ e } n_0 \text{ tal que }<br />
+                    &amp;0 \leq c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n) \text{ para todos } n \geq n_0 }
+\end{align</em>}
+$$</p>
+
+<p>Gráficamente podemos ver o efeito desse limites assintóticos na imagem abaixo:</p>
+
+<figure>
+    <a href="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/images/fig2.1.gif"><img src="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/images/fig2.1.gif"></a>
+    <figcaption><a href="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/2.1%20Asymptotic%20Notation.html" title="http://www.cs.uml.edu/~jannunzi/91.404/classNotes/ch2/2.1%20Asymptotic%20Notation.html">Exemplo de funções com limites assintóticos restritos, superiores e inferiores. (a) restringe uma função dentro de fatores constantes. (b) limita superiormente uma função dentro de fatores constantes. (c) limita inferiormente uma função dentro de fatores constantes</a>.</figcaption>
+</figure>
+
+<h3 id="limites-assintóticos-e-algoritmos">Limites Assintóticos e Algoritmos</h3>
+
+<p>Em particular aos algoritmos, a notação <em>Big-O</em> é muito utilizada para descrever os limites assintóticos superiores das funções do tempo de execução e espaço em memória utilizado, chamados de <strong>complexidade de tempo e espaço</strong>, respectivamente. Tais complexidades são comumente descritas para cenários específicos, como o melhor caso, pior caso, e o caso médio.</p>
+
+<p>O termo <strong>melhor caso</strong> se refere ao comportamento do algoritmo sob condições ótimas. Por exemplo: para um algoritmo de ordenação, a condição ótima seria um array de entrada já ordenado. De maneira análoga, o termo <strong>pior caso</strong> se refere as condições extremas de execução do algoritmo, que no exemplo anterior poderia ser um array em ordem decrescente. Já para o <strong>caso médio</strong>, como o próprio nome indica, trivialmente descrevemos uma média da função analisada sob todos os possíveis cenários.</p>
+
+<p>O algoritmo de ordenação <strong><em>Insertion sort</em></strong>, ou <em>ordenação por inserção</em>, tem um tempo de execução no pior caso $O(n^2)$, ou seja, no pior cenário possível o tempo de execução do algoritmo será uma função $an^2 + bn + c$, sendo $n$ o tamanho do array de entrada. Essas análises podem ser utilizadas na comparação de performance dos algoritmos, ou até para escolhermos aquele que mais se adequa a nossa situação. Uma ótima referência é o site <a href="http://bigocheatsheet.com/" title="Big-O Cheat Sheet"><strong>Big-O Cheat Sheet</strong></a>, que traz as complexidades dos algoritmos e estruturas de dados mais comuns descritos com a notação <em>Big-O</em>.</p>
+
+<p>Em outro artigo, falaremos um pouco mais sobre as complexidades de tempo e espaço.</p>
+
+<h3 id="leituras-adicionais">Leituras adicionais</h3>
+
+<ul>
+<li><a href="http://bigocheatsheet.com/" title="Big-O Cheat Sheet"><strong><em>Big-O Cheat Sheet</em></strong> (http://bigocheatsheet.com/)</a></li>
+<li><a href="https://books.google.com.br/books?id=QWIrAAAAQBAJ" title="Algorithm Design by Jon Kleinberg, Éva Tardos"><strong><em>Algorithm Design</em></strong> by Jon Kleinberg, Éva Tardos</a></li>
+<li><a href="http://books.google.com.br/books?id=0BoNBQAAQBAJ" title="Introduction to Algorithms by Thomas H. Cormen et. al."><strong><em>Introduction to Algorithms</em></strong> by Thomas H. Cormen et. al.</a></li>
+</ul>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://gbiel.com/js/docs.min.js"></script>
+<script src="http://gbiel.com/js/main.js"></script>
+
+<script src="http://gbiel.com/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
